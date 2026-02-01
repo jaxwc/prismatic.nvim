@@ -4,14 +4,6 @@ A dark Neovim colorscheme with vibrant, jewel-toned colors - like light through 
 
 ![Prismatic](https://img.shields.io/badge/neovim-%23000000.svg?style=flat&logo=neovim)
 
-## Features
-
-- Dark background with vivid accent colors
-- Treesitter support
-- LSP semantic token support
-- Lualine theme included
-- Plugin support: Telescope, nvim-cmp, nvim-tree, neo-tree, gitsigns, lazy.nvim, mason, which-key, flash.nvim, mini.nvim, and more
-
 ## Colors
 
 | Color | Hex | Usage |
@@ -73,12 +65,3 @@ require("lualine").setup({
   options = { theme = "prismatic" }
 })
 ```
-
-## Extras
-
-The theme repository also includes configs for:
-- **Ghostty** terminal
-
-## License
-
-MIT
