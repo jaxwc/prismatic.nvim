@@ -1,10 +1,9 @@
 -- Prismatic color palette
--- A dark theme with vibrant, jewel-toned colors
 
 local M = {}
 
 M.colors = {
-	-- Backgrounds (the void)
+	-- Backgrounds
 	bg = "#0d0d0d",
 	bg_alt = "#1a1a1a",
 	bg_highlight = "#262626",
@@ -17,7 +16,7 @@ M.colors = {
 	fg_muted = "#7a7a7a",
 	fg_dark = "#525252",
 
-	-- The prism colors (vibrant accents)
+	-- The prism colors
 	red = "#ee5396",
 	green = "#50fa7b",
 	yellow = "#fac863",
