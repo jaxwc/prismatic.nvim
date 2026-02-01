@@ -1,0 +1,246 @@
+-- Prismatic plugin highlights
+local M = {}
+
+function M.setup(colors)
+  local c = colors
+
+  return {
+    -- ============================================
+    -- Telescope
+    -- ============================================
+    TelescopeNormal = { fg = c.fg, bg = c.bg_float },
+    TelescopeBorder = { fg = c.bg_visual, bg = c.bg_float },
+    TelescopeTitle = { fg = c.cyan, bold = true },
+    TelescopePromptNormal = { fg = c.fg_bright, bg = c.bg_highlight },
+    TelescopePromptBorder = { fg = c.bg_highlight, bg = c.bg_highlight },
+    TelescopePromptTitle = { fg = c.bg, bg = c.magenta, bold = true },
+    TelescopePromptPrefix = { fg = c.magenta },
+    TelescopePromptCounter = { fg = c.fg_muted },
+    TelescopePreviewTitle = { fg = c.bg, bg = c.green, bold = true },
+    TelescopePreviewBorder = { fg = c.bg_visual, bg = c.bg_float },
+    TelescopePreviewNormal = { bg = c.bg_float },
+    TelescopePreviewLine = { bg = c.bg_alt },
+    TelescopeResultsTitle = { fg = c.bg, bg = c.blue, bold = true },
+    TelescopeResultsBorder = { fg = c.bg_visual, bg = c.bg_float },
+    TelescopeSelection = { bg = c.bg_visual },
+    TelescopeSelectionCaret = { fg = c.magenta },
+    TelescopeMatching = { fg = c.yellow, bold = true },
+
+    -- ============================================
+    -- nvim-cmp
+    -- ============================================
+    CmpItemAbbr = { fg = c.fg },
+    CmpItemAbbrDeprecated = { fg = c.fg_muted, strikethrough = true },
+    CmpItemAbbrMatch = { fg = c.cyan, bold = true },
+    CmpItemAbbrMatchFuzzy = { fg = c.cyan, bold = true },
+    CmpItemKind = { fg = c.purple },
+    CmpItemMenu = { fg = c.fg_muted },
+
+    CmpItemKindClass = { fg = c.yellow },
+    CmpItemKindColor = { fg = c.magenta },
+    CmpItemKindConstant = { fg = c.orange },
+    CmpItemKindConstructor = { fg = c.yellow },
+    CmpItemKindEnum = { fg = c.yellow },
+    CmpItemKindEnumMember = { fg = c.purple },
+    CmpItemKindEvent = { fg = c.magenta },
+    CmpItemKindField = { fg = c.cyan },
+    CmpItemKindFile = { fg = c.blue },
+    CmpItemKindFolder = { fg = c.blue },
+    CmpItemKindFunction = { fg = c.magenta },
+    CmpItemKindInterface = { fg = c.yellow },
+    CmpItemKindKeyword = { fg = c.blue },
+    CmpItemKindMethod = { fg = c.magenta },
+    CmpItemKindModule = { fg = c.teal },
+    CmpItemKindOperator = { fg = c.cyan },
+    CmpItemKindProperty = { fg = c.cyan },
+    CmpItemKindReference = { fg = c.purple },
+    CmpItemKindSnippet = { fg = c.green },
+    CmpItemKindStruct = { fg = c.yellow },
+    CmpItemKindText = { fg = c.fg },
+    CmpItemKindTypeParameter = { fg = c.yellow },
+    CmpItemKindUnit = { fg = c.orange },
+    CmpItemKindValue = { fg = c.purple },
+    CmpItemKindVariable = { fg = c.fg },
+
+    -- ============================================
+    -- nvim-tree
+    -- ============================================
+    NvimTreeNormal = { fg = c.fg, bg = c.bg },
+    NvimTreeNormalNC = { fg = c.fg, bg = c.bg },
+    NvimTreeRootFolder = { fg = c.magenta, bold = true },
+    NvimTreeFolderName = { fg = c.blue },
+    NvimTreeFolderIcon = { fg = c.blue },
+    NvimTreeOpenedFolderName = { fg = c.cyan },
+    NvimTreeEmptyFolderName = { fg = c.fg_muted },
+    NvimTreeIndentMarker = { fg = c.bg_visual },
+    NvimTreeWinSeparator = { fg = c.bg, bg = c.bg },
+    NvimTreeSymlink = { fg = c.cyan },
+    NvimTreeSpecialFile = { fg = c.magenta },
+    NvimTreeImageFile = { fg = c.purple },
+    NvimTreeGitDirty = { fg = c.git_change },
+    NvimTreeGitNew = { fg = c.git_add },
+    NvimTreeGitDeleted = { fg = c.git_delete },
+    NvimTreeGitStaged = { fg = c.green },
+
+    -- ============================================
+    -- neo-tree
+    -- ============================================
+    NeoTreeNormal = { fg = c.fg, bg = c.bg },
+    NeoTreeNormalNC = { fg = c.fg, bg = c.bg },
+    NeoTreeDirectoryName = { fg = c.blue },
+    NeoTreeDirectoryIcon = { fg = c.blue },
+    NeoTreeRootName = { fg = c.magenta, bold = true },
+    NeoTreeFileName = { fg = c.fg },
+    NeoTreeFileIcon = { fg = c.fg },
+    NeoTreeGitAdded = { fg = c.git_add },
+    NeoTreeGitModified = { fg = c.git_change },
+    NeoTreeGitDeleted = { fg = c.git_delete },
+    NeoTreeGitConflict = { fg = c.orange },
+    NeoTreeGitUntracked = { fg = c.fg_muted },
+    NeoTreeIndentMarker = { fg = c.bg_visual },
+    NeoTreeSymbolicLinkTarget = { fg = c.cyan },
+
+    -- ============================================
+    -- Gitsigns
+    -- ============================================
+    GitSignsAdd = { fg = c.git_add },
+    GitSignsChange = { fg = c.git_change },
+    GitSignsDelete = { fg = c.git_delete },
+    GitSignsAddNr = { fg = c.git_add },
+    GitSignsChangeNr = { fg = c.git_change },
+    GitSignsDeleteNr = { fg = c.git_delete },
+    GitSignsAddLn = { bg = c.diff_add_bg },
+    GitSignsChangeLn = { bg = c.diff_change_bg },
+    GitSignsDeleteLn = { bg = c.diff_delete_bg },
+    GitSignsCurrentLineBlame = { fg = c.fg_muted, italic = true },
+
+    -- ============================================
+    -- Indent Blankline
+    -- ============================================
+    IndentBlanklineChar = { fg = c.bg_highlight },
+    IndentBlanklineContextChar = { fg = c.bg_visual },
+    IndentBlanklineContextStart = { sp = c.bg_visual, underline = true },
+    IblIndent = { fg = c.bg_highlight },
+    IblScope = { fg = c.bg_visual },
+
+    -- ============================================
+    -- Which-key
+    -- ============================================
+    WhichKey = { fg = c.magenta },
+    WhichKeyGroup = { fg = c.blue },
+    WhichKeyDesc = { fg = c.fg },
+    WhichKeySeperator = { fg = c.fg_muted },
+    WhichKeySeparator = { fg = c.fg_muted },
+    WhichKeyFloat = { bg = c.bg_float },
+    WhichKeyValue = { fg = c.fg_muted },
+
+    -- ============================================
+    -- Lazy.nvim
+    -- ============================================
+    LazyH1 = { fg = c.bg, bg = c.magenta, bold = true },
+    LazyH2 = { fg = c.magenta, bold = true },
+    LazyButton = { fg = c.fg, bg = c.bg_alt },
+    LazyButtonActive = { fg = c.bg, bg = c.blue },
+    LazyComment = { fg = c.fg_muted },
+    LazyCommit = { fg = c.green },
+    LazyCommitIssue = { fg = c.yellow },
+    LazyCommitType = { fg = c.cyan },
+    LazyDir = { fg = c.blue },
+    LazyNoCond = { fg = c.red },
+    LazyProgressDone = { fg = c.green },
+    LazyProgressTodo = { fg = c.bg_visual },
+    LazyReasonCmd = { fg = c.yellow },
+    LazyReasonEvent = { fg = c.magenta },
+    LazyReasonFt = { fg = c.cyan },
+    LazyReasonKeys = { fg = c.blue },
+    LazyReasonPlugin = { fg = c.purple },
+    LazyReasonSource = { fg = c.orange },
+    LazyReasonStart = { fg = c.green },
+    LazySpecial = { fg = c.cyan },
+    LazyUrl = { fg = c.blue, underline = true },
+    LazyValue = { fg = c.purple },
+
+    -- ============================================
+    -- Mason
+    -- ============================================
+    MasonHeader = { fg = c.bg, bg = c.magenta, bold = true },
+    MasonHeaderSecondary = { fg = c.bg, bg = c.blue, bold = true },
+    MasonHighlight = { fg = c.cyan },
+    MasonHighlightBlock = { fg = c.bg, bg = c.cyan },
+    MasonHighlightBlockBold = { fg = c.bg, bg = c.cyan, bold = true },
+    MasonHighlightSecondary = { fg = c.yellow },
+    MasonMuted = { fg = c.fg_muted },
+    MasonMutedBlock = { fg = c.fg_muted, bg = c.bg_alt },
+
+    -- ============================================
+    -- Notify
+    -- ============================================
+    NotifyERRORBorder = { fg = c.error },
+    NotifyWARNBorder = { fg = c.warning },
+    NotifyINFOBorder = { fg = c.info },
+    NotifyDEBUGBorder = { fg = c.fg_muted },
+    NotifyTRACEBorder = { fg = c.purple },
+    NotifyERRORIcon = { fg = c.error },
+    NotifyWARNIcon = { fg = c.warning },
+    NotifyINFOIcon = { fg = c.info },
+    NotifyDEBUGIcon = { fg = c.fg_muted },
+    NotifyTRACEIcon = { fg = c.purple },
+    NotifyERRORTitle = { fg = c.error },
+    NotifyWARNTitle = { fg = c.warning },
+    NotifyINFOTitle = { fg = c.info },
+    NotifyDEBUGTitle = { fg = c.fg_muted },
+    NotifyTRACETitle = { fg = c.purple },
+
+    -- ============================================
+    -- Noice
+    -- ============================================
+    NoiceCmdlineIcon = { fg = c.magenta },
+    NoiceCmdlineIconSearch = { fg = c.yellow },
+    NoiceCmdlinePopup = { fg = c.fg, bg = c.bg_float },
+    NoiceCmdlinePopupBorder = { fg = c.bg_visual },
+    NoiceConfirm = { fg = c.fg, bg = c.bg_float },
+    NoiceConfirmBorder = { fg = c.magenta },
+    NoiceFormatConfirm = { fg = c.cyan },
+    NoiceFormatConfirmDefault = { fg = c.bg, bg = c.magenta },
+    NoiceMini = { fg = c.fg, bg = c.bg_alt },
+    NoicePopup = { fg = c.fg, bg = c.bg_float },
+    NoicePopupBorder = { fg = c.bg_visual },
+
+    -- ============================================
+    -- Flash.nvim
+    -- ============================================
+    FlashBackdrop = { fg = c.fg_muted },
+    FlashLabel = { fg = c.bg, bg = c.magenta, bold = true },
+    FlashMatch = { fg = c.cyan },
+    FlashCurrent = { fg = c.yellow },
+
+    -- ============================================
+    -- Mini plugins
+    -- ============================================
+    MiniCursorword = { bg = c.bg_highlight },
+    MiniIndentscopeSymbol = { fg = c.cyan },
+    MiniJump = { fg = c.bg, bg = c.magenta },
+    MiniJump2dSpot = { fg = c.magenta, bold = true },
+    MiniStatuslineDevinfo = { fg = c.fg, bg = c.bg_highlight },
+    MiniStatuslineFileinfo = { fg = c.fg, bg = c.bg_highlight },
+    MiniStatuslineFilename = { fg = c.fg, bg = c.bg_alt },
+    MiniStatuslineInactive = { fg = c.fg_muted, bg = c.bg_alt },
+    MiniStatuslineModeCommand = { fg = c.bg, bg = c.yellow, bold = true },
+    MiniStatuslineModeInsert = { fg = c.bg, bg = c.green, bold = true },
+    MiniStatuslineModeNormal = { fg = c.bg, bg = c.blue, bold = true },
+    MiniStatuslineModeOther = { fg = c.bg, bg = c.teal, bold = true },
+    MiniStatuslineModeReplace = { fg = c.bg, bg = c.red, bold = true },
+    MiniStatuslineModeVisual = { fg = c.bg, bg = c.purple, bold = true },
+    MiniSurround = { fg = c.bg, bg = c.orange },
+    MiniTablineCurrent = { fg = c.fg, bg = c.bg },
+    MiniTablineFill = { bg = c.bg_alt },
+    MiniTablineHidden = { fg = c.fg_muted, bg = c.bg_alt },
+    MiniTablineModifiedCurrent = { fg = c.warning, bg = c.bg },
+    MiniTablineModifiedHidden = { fg = c.warning, bg = c.bg_alt },
+    MiniTablineModifiedVisible = { fg = c.warning, bg = c.bg_alt },
+    MiniTablineTabpagesection = { fg = c.bg, bg = c.blue },
+    MiniTablineVisible = { fg = c.fg, bg = c.bg_alt },
+  }
+end
+
+return M
