@@ -9,7 +9,7 @@
 | Purple  | `#be95ff` | Strings, constants    |
 | Cyan    | `#3ddbd9` | Operators, delimiters |
 | Yellow  | `#fac863` | Types, warnings       |
-| Green   | `#42be65` | Success, git add      |
+| Green   | `#50fa7b` | Success, git add      |
 | Red     | `#ee5396` | Errors, git delete    |
 | Orange  | `#ff9e64` | Booleans, special     |
 | Teal    | `#08bdba` | Macros, namespaces    |
