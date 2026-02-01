@@ -201,6 +201,22 @@ function M.setup(colors)
 		MiniTablineModifiedVisible = { fg = c.warning, bg = c.bg_alt },
 		MiniTablineTabpagesection = { fg = c.bg, bg = c.blue },
 		MiniTablineVisible = { fg = c.fg, bg = c.bg_alt },
+
+		-- Oil.nvim
+		OilDir = { fg = c.blue },
+		OilDirIcon = { fg = c.blue },
+		OilLink = { fg = c.cyan },
+		OilOrphanLink = { fg = c.red },
+		OilSocket = { fg = c.magenta },
+		OilHidden = { fg = c.fg_muted },
+		OilDirHidden = { fg = c.fg_muted },
+		OilLinkHidden = { fg = c.fg_muted },
+		OilSocketHidden = { fg = c.fg_muted },
+		OilCreate = { fg = c.git_add },
+		OilDelete = { fg = c.git_delete },
+		OilMove = { fg = c.git_change },
+		OilCopy = { fg = c.yellow },
+		OilChange = { fg = c.git_change },
 	}
 end
 
