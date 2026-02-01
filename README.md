@@ -1,23 +1,19 @@
 # prismatic.nvim
 
-A dark Neovim colorscheme with vibrant, jewel-toned colors - like light through a prism.
-
-![Prismatic](https://img.shields.io/badge/neovim-%23000000.svg?style=flat&logo=neovim)
-
 ## Colors
 
-| Color | Hex | Usage |
-|-------|-----|-------|
-| Blue | `#78a9ff` | Keywords, types |
-| Magenta | `#ff7eb6` | Functions |
-| Purple | `#be95ff` | Strings, constants |
-| Cyan | `#3ddbd9` | Operators, delimiters |
-| Yellow | `#fac863` | Types, warnings |
-| Green | `#42be65` | Success, git add |
-| Red | `#ee5396` | Errors, git delete |
-| Orange | `#ff9e64` | Booleans, special |
-| Teal | `#08bdba` | Macros, namespaces |
-| Sky | `#82cfff` | Numbers |
+| Color   | Hex       | Usage                 |
+| ------- | --------- | --------------------- |
+| Blue    | `#78a9ff` | Keywords, types       |
+| Magenta | `#ff7eb6` | Functions             |
+| Purple  | `#be95ff` | Strings, constants    |
+| Cyan    | `#3ddbd9` | Operators, delimiters |
+| Yellow  | `#fac863` | Types, warnings       |
+| Green   | `#42be65` | Success, git add      |
+| Red     | `#ee5396` | Errors, git delete    |
+| Orange  | `#ff9e64` | Booleans, special     |
+| Teal    | `#08bdba` | Macros, namespaces    |
+| Sky     | `#82cfff` | Numbers               |
 
 ## Installation
 
