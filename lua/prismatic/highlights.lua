@@ -1,13 +1,11 @@
 -- Prismatic highlight groups
 local M = {}
 
-function M.setup(colors)
+function M.setup(colors, config)
 	local c = colors
+	local styles = config.styles
 
 	return {
-		-- ============================================
-		-- Editor highlights
-		-- ============================================
 		Normal = { fg = c.fg, bg = c.bg },
 		NormalNC = { fg = c.fg, bg = c.bg },
 		NormalFloat = { fg = c.fg_bright, bg = c.bg_float },
@@ -80,24 +78,24 @@ function M.setup(colors)
 		SpellLocal = { undercurl = true, sp = c.info },
 		SpellRare = { undercurl = true, sp = c.hint },
 
-		Comment = { fg = c.fg_muted, italic = true },
+		Comment = { fg = c.fg_muted, italic = styles.comments.italic },
 
 		Constant = { fg = c.purple },
-		String = { fg = c.purple },
+		String = { fg = c.purple, italic = styles.strings.italic },
 		Character = { fg = c.purple },
 		Number = { fg = c.sky },
 		Boolean = { fg = c.orange },
 		Float = { fg = c.sky },
 
-		Identifier = { fg = c.fg },
-		Function = { fg = c.magenta, bold = true },
+		Identifier = { fg = c.fg, italic = styles.variables.italic },
+		Function = { fg = c.magenta, bold = styles.functions.bold },
 
-		Statement = { fg = c.blue },
-		Conditional = { fg = c.blue },
-		Repeat = { fg = c.blue },
+		Statement = { fg = c.blue, italic = styles.keywords.italic },
+		Conditional = { fg = c.blue, italic = styles.keywords.italic },
+		Repeat = { fg = c.blue, italic = styles.keywords.italic },
 		Label = { fg = c.cyan },
 		Operator = { fg = c.cyan },
-		Keyword = { fg = c.blue },
+		Keyword = { fg = c.blue, italic = styles.keywords.italic },
 		Exception = { fg = c.red },
 
 		PreProc = { fg = c.cyan },

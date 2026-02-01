@@ -3,6 +3,13 @@ local M = {}
 M.config = {
 	transparent = false,
 	terminal_colors = true,
+	styles = {
+		comments = { italic = true },
+		keywords = { italic = false },
+		functions = { bold = false },
+		strings = {},
+		variables = {},
+	},
 }
 
 function M.setup(opts)
@@ -24,7 +31,7 @@ function M.load()
 
 	local colors = palette.colors
 
-	local hl_groups = highlights.setup(colors)
+	local hl_groups = highlights.setup(colors, M.config)
 	for group, opts in pairs(hl_groups) do
 		vim.api.nvim_set_hl(0, group, opts)
 	end
